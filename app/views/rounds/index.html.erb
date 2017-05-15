@@ -1,6 +1,6 @@
 <% @cohorts.each do |cohort| %>
 <h1 class="bg-faded"><%= cohort.name %></h1>
-  <%= form_tag(:rounds) do %>
+  <%= form_tag(:rounds, url: new_cohort_team_path(cohort)) do %>
   <p>Stage: <%= cohort.stage_id %></p>
   <p>Pitch Due: <%= cohort.pitch_start %></p>
   <p>Voting Due: <%= cohort.vote_end %></p>

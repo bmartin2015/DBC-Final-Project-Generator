@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :admins
   get 'students/index'
 
-  resources :cohorts
+  resources :cohorts do
+    resources :teams
+  end
   devise_for :students, :controllers => {:registration => 'registrations'}
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   resources :votes ,only: [:create, :index]
@@ -20,7 +22,6 @@ Rails.application.routes.draw do
   resources :rounds
   resources :admins
   resources :pitches
-  resources :teams
 
   get '/' => 'static_pages#home'
 end

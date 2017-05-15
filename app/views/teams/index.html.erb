@@ -1,0 +1,10 @@
+<div class="students">
+      <hr>
+      <strong>Teams:</strong>
+      <hr>
+      <ul class="list-group">
+      <% @teams.each do |team| %>
+        <li class="list-group-item"><%= Student.find(team.student_id).full_name %> - <%= Pitch.find(team.pitch_id).name %></li>
+      <% end %>
+      </ul>
+</div>

@@ -1,15 +1,21 @@
 class TeamsController < ApplicationController
   def new
-    @cohort = Cohort.find(1)
-    @pitches = @cohort.current_pitches
-    @votes = {}
-    a = []
-    @pitches.each do |pitch|
-      a << pitch.votes.select do |vote|
-        vote.round_id == @cohort.stage_id
-      end
-      @votes[pitch] = a
+    @cohort = Cohort.find(params[:cohort_id])
+    @options = []
+    @cohort.current_pitches.each do |pitch|
+      @options << [pitch.name, pitch.id]
     end
-    binding.pry
+  end
+
+  def create
+    params[:students].each do |student, pitch|
+      team = Team.new(student_id: student.to_i, pitch_id: pitch.to_i)
+      team.save
+    end
+    redirect_to cohort_teams_path(@cohort) # needs a team path
+  end
+
+  def index
+    @teams = Team.order(:pitch_id)
   end
 end

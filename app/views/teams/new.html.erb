@@ -1,5 +1,5 @@
 <h1>Form Teams</h1>
-
+<%= form_tag(:cohort_teams) do %>
 <table class="table">
 <thead>
 <tr>
@@ -14,10 +14,13 @@
 <% @cohort.students.each do |student| %>
 <tr>
   <td><%= student.full_name %></td>
-  <td><%= student.round_votes(@cohort.stage_id, 1) %></td>
-  <td><%= student.round_votes(@cohort.stage_id, 2) %> </td>
-  <td><%= select_tag(:team, options_for_select([["Team A", 1],["Team B", 2]])) %></td>
+  <% @cohort.current_pitches.each do |pitch| %>
+  <td><%= student.round_votes(@cohort.stage_id, pitch) %></td>
+  <% end %>
+  <td><%= select_tag("students[#{student.id}", options_for_select(@options)) %></td>
 </tr>
 <% end %>
 </tbody>
 </table>
+<%= submit_tag('Save Teams') %>
+<% end %>

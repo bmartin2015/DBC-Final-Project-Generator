@@ -12,7 +12,7 @@ class RoundsController < ApplicationController
       if params[:round_status] == '1'
         redirect_to rounds_path
       elsif params[:round_status] == '2'
-        redirect_to new_team_path
+        redirect_to new_cohort_team_path(@cohort)
       end
     end
   end
