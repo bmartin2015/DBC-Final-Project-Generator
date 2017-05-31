@@ -1,35 +1,27 @@
 # DBC Final Project Generator
 
-# TEAM
+## Description
+This project helps facilitate final project pitches, voting, and group creation for Phase 3 DBC students. This was a complete rewite of the origional (DBC Final Project Generator)[https://github.com/bmartin2015/DBC-Final-Project-Generator] by myself.
+
+## Features
+* Students can add a limited number of pitches
+* Students can vote on a limited number of pitches within a round
+* Admins can see a listing of most voted on pitches
+* Admins can publish a subset of the most voted on pitches from round 1 for students to vote on
+* Admins can create teams based on top selected pitches and student preferences
+* Admins can publish the final teams
+
+## Technologies Used
+
+* Back End: Rails API, ActiveRecord, PostgreSQL
+* Front End: JavaScript, jQuery, HTML, CSS, Bootstrap
+
+## Installation and Use
+
+* Pending
+
+## The Team
 * Ben Martin [@bmartin2015](https://www.github.com/bmartin2015)
 * Juan Zalles [@zjuanz](https://github.com/zjuanz)
 * Matthias Haefeli [@matthiashaefeli](https://github.com/matthiashaefeli)
 * Rafael Lara [@litola](https://github.com/litola)
-
-# Project Description
-
-This project helps facilitate final project pitches, voting, and group creation for Phase 3 DBC students.
-
-# Install
-
-Pending
-
-# How to use
-
-Pending
-
-# Features
-
-Support admin and student accounts
-Students should be able to add a limited number of pitches
-Students should be able to vote on a limited number of pitches (Round 1)
-Admin should be able to see a listing of most voted on pitches (Round 1)
-Admin should be able to publish a subset of the most voted on pitches from round 1 for students to vote on
-Students should be able to vote on a limited number of  the selected subset of pitches based on their preferences (Round 2)
-Admin should be able to create teams based on top selected pitches and student preferences
-Admin should be able to publish the final teams
-
-Stretch:
-Import student emails from CSV file and create accounts for them
-Drag and drop interface for creating teams
-Visualize data with D3, HighCharts, etc
