@@ -1,7 +1,7 @@
 # DBC Final Project Generator
 
 ## Description
-This project helps facilitate final project pitches, voting, and group creation for Phase 3 DBC students. This was a complete rewite of the origional (DBC Final Project Generator)[https://github.com/bmartin2015/DBC-Final-Project-Generator] by myself.
+This project helps facilitate final project pitches, voting, and group creation for Phase 3 DBC students.
 
 ## Features
 * Students can add a limited number of pitches
